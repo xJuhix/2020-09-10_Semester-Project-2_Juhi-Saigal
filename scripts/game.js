@@ -1,4 +1,4 @@
-var TRAPS = [8, 14, 18, 21, 27, 6, 29]
+var TRAPS = [10, 14, 18, 21, 27, 7, 29]
 PLAYER = JSON.parse(window.localStorage.getItem('player'))
 PLAYER.turn = 0
 
