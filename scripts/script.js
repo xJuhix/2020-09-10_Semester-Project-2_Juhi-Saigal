@@ -266,7 +266,7 @@ function cardClicked() {
 }
 
 var PLAYER = [];
-var TRAPS = [8, 14, 18, 21, 27, 5, 3]
+var TRAPS = [10, 14, 18, 21, 27, 7, 29]
 document.getElementById('startbtn').addEventListener('click', () => {
     PLAYER = [];
     let boxes = document.getElementsByClassName('checkbox');
