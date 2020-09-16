@@ -1,10 +1,10 @@
-var TRAPS = [8, 14, 18, 21, 27, 5, 3]
+var TRAPS = [8, 14, 18, 21, 27, 6, 29]
 PLAYER = JSON.parse(window.localStorage.getItem('player'))
 PLAYER.turn = 0
 
 document.getElementById('one').src = PLAYER[0].src
 document.getElementById('two').src = PLAYER[1].src
-// document.getElementsByClassName('image-player2').src = PLAYER[1].src
+
 
 document.getElementById('name-player1').innerHTML = PLAYER[0].name
 document.getElementById('name-player2').innerHTML = PLAYER[1].name
@@ -12,6 +12,7 @@ document.getElementById('name-player2').innerHTML = PLAYER[1].name
 document.getElementById('P-0').src = PLAYER[0].src
 document.getElementById('P-1').src = PLAYER[1].src
 
+// move tokens across the board
 function getOffset(el) {
     var _x = 0;
     var _y = 0;
@@ -105,8 +106,8 @@ function rollDice() {
         }, 2000, Pos);
         y = (TRAPS.indexOf(Pos) * 2 + 1) % 6;
         d1 = y + 1;
-        //Pos= PLAYER[PLAYER.turn].position -=d1;
-        Pos -= 5;
+       
+        Pos -= 7;
         setTimeout(function (Pos, x) {
             movePlayer(Pos, 0, x);
         }, 600, Pos, x);
@@ -121,7 +122,7 @@ function rollDice() {
     }
 
     console.log("Player turn: " + PLAYER.turn);
-    document.getElementById('status').textContent = "It is " + PLAYER[PLAYER.turn].name + "'s turn:";
+    document.getElementById("status").textContent = "It is " + PLAYER[PLAYER.turn].name + "'s turn:";
 }
 
 function gameRules() {
