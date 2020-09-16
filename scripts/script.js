@@ -285,17 +285,7 @@ document.getElementById('startbtn').addEventListener('click', () => {
     }
 })
 
-/*
-1. You've landed on Winterfell! nee Snow might assassinate you! Go back () steps
 
-2. The Ironborn are about! Protect your loot and go back () steps!
-
-3. Ewwwww! You've reached Kings's Landing! It reeks! Go back () steps!
-
-4. Only Bolton can survive Dreadfort! Go back () steps!
-
-5. You landed at Castle Black. You may see the wall, but the criminals lurking around won't make it easy. Go back () steps!
-*/
 function startGame() {
     playerCards.forEach((val) => {
         for (let i = 0; i < 2; i++) {
