@@ -367,6 +367,9 @@ background-color: rgba(20, 31, 38, 0.822);
 
 /*--------------------------------- Mobile --------------------------------*/
 @media screen and (max-width: 640px) {
+    body{
+        overflow-x: hidden;
+    }
 
 
     .modal-top {
